@@ -1,6 +1,114 @@
 
+<!--SMALL VERSION-->
+<div class="hidden-lg-up">
 
-<div (click)="closeNavMenu()">
+  <!--MAIN TITLE-->
+  <div class="mrg-top-50 mrg-btm-25">
+    <div class="container" (click)="onSelectHeader('home')">
+      <div class="row">
+        <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
+          <div class="row">
+            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+              <div class="text-center mrg-btm-5 btm-border">
+                <h1 class="font-size-48 color-gold bold">Michael Call</h1>
+              </div>
+              <div class="text-right">
+                <h1 class="font-size-20 color-gold">FULL STACK DEVELOPER</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--SITE HEADERS-->
+  <div class="container mrg-btm-25">
+    <div class="row">
+      <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <div class="flex-space-between">
+              <div (click)="onSelectHeader('about-me')">
+                <div class="font-size-10 pd-btm-2 color-gold bold" [ngClass]="{'border-bottom ': onSelectAboutMe == 'about-me'}">About Me</div>
+              </div>
+              <div (click)="onSelectHeader('portfolio')">
+                <div class="font-size-10 pd-btm-2 color-gold bold" [ngClass]="{'border-bottom ': onSelectAboutMe == 'portfolio'}">Portfolio</div>
+              </div>
+              <div (click)="onSelectHeader('contact')">
+                <div class="font-size-10 pd-btm-2 color-gold bold" [ngClass]="{'border-bottom ': onSelectAboutMe == 'contact'}">Contact</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--SITE CONTENT-->
+  <div class="container">
+    <div class="row">
+      <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
+        <div class="row">
+          <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+
+            <!--menu picture of Michael call-->
+            <div class="rel-position">
+              <img [@main-pic-small]="mainPicSmall" class="img box-shadow" style="width: 100%" src="../../assets/1421.jpg" alt="">
+
+              <!--about me-->
+              <div [@about-me-small]="aboutMeSmall" class="pos-small">
+                <div>about me</div>
+              </div>
+
+              <!--portfolio-->
+              <div [@portfolio-small]="portfolioSmall" class="pos-small">
+                <div>portfolio</div>
+              </div>
+
+              <!--contact-->
+              <div [@contact-small]="contactSmall" class="pos-small">
+                <div>contact</div>
+              </div>
+
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--LARGE VERSION-->
+<div (click)="closeNavMenu()" class="hidden-lg-down">
   <div class="mrg-top-50">
     <div class="container">
       <div class="row">
@@ -8,7 +116,7 @@
           <div class="row">
             <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
               <div class="text-center mrg-btm-5 btm-border">
-                <h1 class="font-size-48 color-gold bold">Michael Call</h1>
+                <h1 class="font-size-48 color-gold bold">Michael large</h1>
               </div>
               <div class="text-right">
                 <h1 class="font-size-20 color-gold">FULL STACK DEVELOPER</h1>
@@ -43,7 +151,7 @@
               <div class="abs-pos-left-middle ">
                 <div class="color-gold font-size-25">Portfolio</div>
                 <div class="color-gold font-size-25">Contact</div>
-                </div>
+              </div>
 
               <div class="abs-pos-right-middle ">
                 <div class="color-gold font-size-25">Education</div>
