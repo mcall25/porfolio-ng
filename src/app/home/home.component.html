@@ -108,18 +108,18 @@
 <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--LARGE VERSION-->
-<div (click)="closeNavMenu()" class="hidden-lg-down">
+<div class="hidden-lg-down">
   <div class="mrg-top-50">
     <div class="container">
       <div class="row">
         <div class="col-10 offset-1 col-sm-10 offset-sm-1 col-md-10 offset-md-1">
           <div class="row">
-            <div class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
+            <div  class="col-12 col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
               <div class="text-center mrg-btm-5 btm-border">
-                <h1 class="font-size-48 color-gold bold">Michael large</h1>
+                <h1 class="font-size-48 color-gold bold" (click)="animateLarge('all-home-or-open')" >Michael large</h1>
               </div>
               <div class="text-right">
-                <h1 class="font-size-20 color-gold">FULL STACK DEVELOPER</h1>
+                <h1 class="font-size-20 color-gold" (click)="animateLarge('all-home-or-open')" >FULL STACK DEVELOPER</h1>
               </div>
             </div>
           </div>
@@ -139,27 +139,39 @@
 
 
             <!--menu picture of Michael call-->
-            <div class="rel-position">
+            <div class="rel-position" >
 
-              <div  [@top-left]="topLeft" class="abs-pos-top-left " >
-                <div class="color-gold font-size-25">About Me</div>
-                <div class="color-gold font-size-25">Experience</div>
+              <div  [@nav-bar]="navBar" class="abs-pos-top-left" >
+                <div class="color-gold font-size-25 mrg-btm-10">About Me</div>
+                <div class="color-gold font-size-25 mrg-btm-10">Experience</div>
+                <div class="color-gold font-size-25 mrg-btm-10">Portfolio</div>
+                <div class="color-gold font-size-25 mrg-btm-10">Contact</div>
+                <div class="color-gold font-size-25 mrg-btm-10">Education</div>
+                <div class="color-gold font-size-25 mrg-btm-10">Skills</div>
               </div>
 
-              <div class="abs-pos-top-right "></div>
+              <div [@about-me]="aboutMe" class="about-me-card" (click)="cardAnimate('switch-card-about-me')">
+                test
 
-              <div class="abs-pos-left-middle ">
-                <div class="color-gold font-size-25">Portfolio</div>
-                <div class="color-gold font-size-25">Contact</div>
               </div>
 
-              <div class="abs-pos-right-middle ">
-                <div class="color-gold font-size-25">Education</div>
-                <div class="color-gold font-size-25">Skills</div>
+              <div [@experience]="experience" class="about-me-card" (click)="cardAnimate('switch-card-experience')">
+                test
+
               </div>
 
-              <div class="abs-pos-bottom-left "></div>
-              <div class="abs-pos-bottom-right "></div>
+              <!--<div class="abs-pos-left-middle ">-->
+                <!--<div class="color-gold font-size-25">Portfolio</div>-->
+                <!--<div class="color-gold font-size-25">Contact</div>-->
+              <!--</div>-->
+
+              <!--<div class="abs-pos-right-middle ">-->
+                <!--<div class="color-gold font-size-25">Education</div>-->
+                <!--<div class="color-gold font-size-25">Skills</div>-->
+              <!--</div>-->
+
+              <!--<div class="abs-pos-bottom-left "></div>-->
+              <!--<div class="abs-pos-bottom-right "></div>-->
 
 
               <img [@main-pic]="mainPic" class="img box-shadow" style="width: 100%" src="../../assets/1421.jpg" alt="">

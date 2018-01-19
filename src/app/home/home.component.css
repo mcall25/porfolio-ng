@@ -42,6 +42,10 @@
   margin-bottom:5px;
 }
 
+.mrg-btm-10 {
+  margin-bottom: 10px
+}
+
 .mrg-btm-25 {
   margin-bottom:25px;
 }
@@ -87,8 +91,7 @@
   top: 0px;
   width: 50%;
   /*background-color: yellow;*/
-  z-index: 10;
-  height: 33.33%;
+  height: 50%;
   transition: left 2s;
 
 }
@@ -153,6 +156,11 @@
 .pos-small {
   position: absolute;
   top:0px;
+}
+
+.about-me-card {
+  position: absolute;
+  width: 100%;
 }
 
 
