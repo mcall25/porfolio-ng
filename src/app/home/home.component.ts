@@ -7,8 +7,8 @@ import {trigger, state, style, transition, animate, keyframes, group} from '@ang
   styleUrls: ['./home.component.css'],
   animations: [
     trigger('main-pic', [
-      state('start', style({transform: 'translateX(0px)', opacity: '1'})),
-      state('end', style({transform: 'translateX(-1000px)',  opacity: '0'})),
+      state('start', style({transform: 'translateX(0px)', '-webkit-transform': 'translateX(0px)', opacity: '1'})),
+      state('end', style({transform: 'translateX(-1000px)', '-webkit-transform': 'translateX(-1000px)',  opacity: '0'})),
       transition('start <=> end', animate('0.3s 0.1s ease'))
     ]),
     trigger('main-pic-small', [
@@ -37,8 +37,8 @@ import {trigger, state, style, transition, animate, keyframes, group} from '@ang
       transition('start <=> end', animate('0.8s 0.0s ease'))
     ]),
     trigger('about-me', [
-      state('start', style({transform: 'translateX(1000px)', opacity: '0', display: 'none'})),
-      state('end', style({transform: 'translateX(0px)'})),
+      state('start', style({transform: 'translateX(1000px)',  '-webkit-transform': 'translateX(1000px)', opacity: '0', display: 'none'})),
+      state('end', style({transform: 'translateX(0px)',  '-webkit-transform': 'translateX(-0px)'})),
       transition('start <=> end', animate('0.3s 0.1s ease'))
     ]),
     trigger('experience', [
@@ -150,22 +150,18 @@ export class HomeComponent implements OnInit {
 
   }
 
-
   animateLarge(value) {
 
     if (value == 'go-to-menu' &&  this.mainPic == 'start') {
       this.mainPic = 'end'
-      this.navBar = 'end'
       this.aboutMe = 'end';
     }
     else if (value == 'all-home-or-open' && this.mainPic == 'end') {
       this.mainPic = 'start'
-      this.navBar = 'start'
       this.aboutMe = 'start';
     }
     else if (value == 'all-home-or-open' && this.mainPic == 'start') {
       this.mainPic = 'end'
-      this.navBar = 'end'
       this.aboutMe = 'end';
     }
 
@@ -177,11 +173,11 @@ export class HomeComponent implements OnInit {
       this.aboutMe = 'end';
       this.experience = 'start'
     }
-    else if (value == 'switch-card-experience' &&  this.experience == 'start') {
-      console.log('test')
-      this.experience = 'end'
-      this.aboutMe = 'start';
-    }
+    // else if (value == 'switch-card-experience' &&  this.experience == 'start') {
+    //   console.log('test')
+    //   this.experience = 'end'
+    //   this.aboutMe = 'start';
+    // }
   }
 
 
